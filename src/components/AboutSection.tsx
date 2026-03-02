@@ -23,7 +23,7 @@ const AboutSection = () => (
         className="glass-card p-8 md:p-12"
       >
         <p className="text-foreground/90 font-body text-base md:text-lg leading-relaxed mb-4">
-          <span className="text-primary font-semibold">EMPIREX 2026</span> is the flagship national-level technical symposium organized by the Department of B.Tech Artificial Intelligence and Data Science at RVS Technical Campus, Coimbatore.
+          <span className="text-primary font-semibold">EMPIREX 2K26</span> is the flagship national-level technical symposium organized by the Department of B.Tech Artificial Intelligence and Data Science at RVS Technical Campus, Coimbatore.
         </p>
         <p className="text-foreground/80 font-body text-base md:text-lg leading-relaxed mb-4">
           This symposium brings together the brightest minds from across the nation to compete, collaborate, and celebrate technology. From cutting-edge technical challenges to engaging non-technical events, EMPIREX offers something for every aspiring technologist.
@@ -35,7 +35,7 @@ const AboutSection = () => (
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
           {[
             { value: "500+", label: "Expected Participants" },
-            { value: "8+", label: "Events" },
+            { value: "10+", label: "Events" },
             { value: "₹50K+", label: "Prize Pool" },
             { value: "1", label: "Epic Day" },
           ].map((stat, i) => (

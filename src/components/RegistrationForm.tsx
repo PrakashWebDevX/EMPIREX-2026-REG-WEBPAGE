@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const GOOGLE_FORM_URL = "https://forms.google.com/your-form-link-here";
+const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfuzDK_roSBVUFoXV1GdnyMdXccZDOcojCuDFAh3tjh1PgfNQ/viewform?usp=publish-editor";
 
 const RegistrationForm = () => {
   return (

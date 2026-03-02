@@ -4,7 +4,8 @@ import empirexTitle from "@/assets/empirex-title.png";
 import aiEmpireLogo from "@/assets/ai-empire-logo.png";
 import rvsBanner from "@/assets/rvs-banner.png";
 
-const TARGET_DATE = new Date("2026-03-16T09:00:00").getTime();
+
+const TARGET_DATE = new Date("2026-03-17T09:00:00").getTime();
 
 const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -70,18 +71,23 @@ const HeroSection = () => {
           transition={{ duration: 0.8 }}
           className="flex flex-col items-center"
         >
-          <img src={rvsBanner} alt="RVS Technical Campus" className="h-16 md:h-20 mb-6 object-contain" />
-          <img src={aiEmpireLogo} alt="AI Empire Logo" className="w-28 h-28 md:w-40 md:h-40 mb-4 animate-float" />
-          
-          <img src={empirexTitle} alt="EMPIREX" className="h-24 md:h-36 lg:h-44 mb-2 drop-shadow-2xl" />
-          
+          <img src={rvsBanner} alt="RVS Technical Campus" className="w-full h-auto max-h-[80px] object-contain mx-auto" />
+          <img src={aiEmpireLogo} alt="AI Empire Logo" className="w-98 h-98 md:w-80 md:h-90 mb-8 animate-float" />
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-center mb-6 bg-gradient-to-r from-yellow-400 via-amber-500 to-yellow-600 bg-clip-text text-transparent drop-shadow-lg tracking-wide">
+            DEPARTMENT OF ARTIFICIAL INTELLIGENCE & DATA SCIENCE
+          </h2>
+          <img src={empirexTitle} alt="EMPIREX" className="h-55 md:h-84 lg:h-88 mb-5 drop-shadow-5xl" />
+
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-lg md:text-2xl font-body text-primary font-semibold tracking-wider mb-1"
-          >
-            2026
+            className="text-6xl md:text-8xl font-display text-sm font-bold gold-gradient-text hidden sm:block"
+            style={{
+              fontFamily: "Bebas Neue, sans-serif",
+              textShadow: "0px 4px 20px rgba(0,0,0,0.6)"
+            }}>
+            2K26
           </motion.p>
 
           <motion.p
@@ -109,19 +115,17 @@ const HeroSection = () => {
           >
             <button
               onClick={scrollToRegister}
-              className="px-8 py-3 bg-primary text-primary-foreground font-display font-bold text-sm md:text-base rounded-lg animate-glow-pulse hover:scale-105 transition-transform"
-            >
+              className="px-8 py-3 bg-primary text-primary-foreground font-display font-bold text-sm md:text-base rounded-lg animate-glow-pulse hover:scale-105 transition-transform">
               Register Now — ₹150
             </button>
           </motion.div>
 
           <p className="mt-6 text-xs text-muted-foreground font-body">
-            📅 March 16, 2026 &nbsp;|&nbsp; 📍 Room No 222 – Seminar Hall
+            📅 March 17, 2026 &nbsp;|&nbsp; 📍 Room No 222 – Seminar Hall
           </p>
         </motion.div>
       </div>
     </section>
   );
 };
-
 export default HeroSection;

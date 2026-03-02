@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Code, Brain, Cpu, Lightbulb, Gamepad2, Mic, Palette, Users, X, Clock, MapPin, Trophy, Globe, Database } from "lucide-react";
-
+import { Code, Brain, Cpu, Lightbulb, Gamepad2, Mic, Palette, Users, X, Clock, MapPin, Trophy, Globe, Database, Phone,FileText,Network,ShieldAlert, } from "lucide-react";
 interface EventInfo {
   icon: React.ElementType;
   title: string;
@@ -11,85 +10,203 @@ interface EventInfo {
   duration: string;
   venue: string;
   teamSize: string;
+  coordinators?: { name: string; phone: string }[];
 }
 
 const technicalEvents: EventInfo[] = [
   {
-    icon: Code, title: "Code Sprint",
-    desc: "Competitive coding challenge testing algorithmic problem-solving skills.",
-    fullDesc: "Battle it out in an intense coding competition! Solve algorithmic challenges across multiple rounds with increasing difficulty. Show off your problem-solving prowess and coding speed.",
-    rules: ["Individual participation", "3 rounds of increasing difficulty", "Languages: C, C++, Java, Python", "Internet access not allowed"],
-    duration: "2 Hours", venue: "Room 222", teamSize: "Individual",
+    icon: FileText, title: "INNOPAPER",
+    desc: "A platform for students to present innovative research ideas, technical solutions, or futuristic concepts in AI, Data Science, and emerging technologies.",
+    fullDesc: "A platform for students to present innovative research ideas, technical solutions, or futuristic concepts in AI, Data Science, and emerging technologies. Showcase your creativity and technical knowledge by presenting a research paper or project proposal. Impress the judges with your vision for the future of tech!",
+    rules: [
+      "Team size: 1–3 members",
+      "Topics must be relevant to approved domains",
+      "Abstract must be submitted before the given deadline",
+      "Presentation time: 8 minutes + 2 minutes Q&A",
+      "PPT should not exceed 8 slides",
+      "File format: PPT or PDF",
+      "Participants must bring their presentation in a pen drive or share via WhatsApp on the day of the event",
+      "Judging Criteria:",
+      "       -Innovation",
+      "       -Technical Content",
+      "       -Presentation Skills",
+      "       -Response to Questions"
+    ],
+    duration: "2 Hours", venue: "Room 222", teamSize: "Individual", coordinators: [
+      { name: "SUDHARSAN", phone: "9655944819" },
+      { name: "SANJAI", phone: "9626883380" }
+    ]
   },
   {
-    icon: Brain, title: "AI Quiz",
-    desc: "Test your knowledge of AI, ML, and Data Science fundamentals.",
-    fullDesc: "A buzzer-round quiz covering Artificial Intelligence, Machine Learning, Deep Learning, Data Science, and emerging tech trends. Prove you're the ultimate AI enthusiast!",
-    rules: ["Team of 2 members", "3 rounds: Written, Rapid Fire, Buzzer", "No electronic devices", "Judges' decision is final"],
-    duration: "1.5 Hours", venue: "Room 222", teamSize: "Team of 2",
+    icon: Brain, title: "QUIZTIX",
+    desc: "A competitive technical quiz covering programming, AI, general tech, and logical reasoning.",
+    fullDesc: "A competitive technical quiz covering programming, AI, general tech, and logical reasoning.",
+    rules: [
+      "Team size: 1 or 2 members",
+      "No use of mobile phones during the quiz",
+      "The quiz consists of 3 rounds",
+      "Questions will be based on general technical domains",
+      "Judges’ decision is final",
+      "Any malpractice leads to disqualification"
+    ],
+    duration: "1.5 Hours", venue: "Room 222", teamSize: "Team of 2", coordinators: [
+      { name: "ELPHIN JOE", phone: "7339427342 " },
+      { name: "ROOBANNIDHI ", phone: "9345018166" }
+    ]
   },
   {
-    icon: Cpu, title: "Paper Presentation",
-    desc: "Present your research on emerging technologies in AI & Data Science.",
-    fullDesc: "Present innovative research papers on cutting-edge topics in AI, Data Science, IoT, Blockchain, and more. Impress the panel of judges with your knowledge and presentation skills.",
-    rules: ["Team of 2-3 members", "IEEE format preferred", "8-10 minutes presentation + 5 min Q&A", "Topics: AI, ML, Data Science, IoT, Blockchain"],
-    duration: "15 Minutes/Team", venue: "Room 222", teamSize: "Team of 2-3",
+    icon: ShieldAlert, title: "HACK THE CODE",
+    desc: "In this event, participants will be provided with code snippets containing logical, syntax, or runtime errors. Within the given time, they must analyze the code, identify the mistakes, and correct them to produce the expected output.",
+    fullDesc: "In this event, participants will be provided with code snippets containing logical, syntax, or runtime errors. Within the given time, they must analyze the code, identify the mistakes, and correct them to produce the expected output. This event tests your debugging skills, understanding of programming concepts, and ability to think critically under pressure. Sharpen your coding and problem-solving abilities in this fast-paced challenge!",
+    rules: [
+      "Platform: Local web-based coding platform hosted on college lab server",
+      "Internet Requirement: Not required. Event will run fully on local LAN",
+      "Programming Languages Allowed: Python (primary language)",
+      "Number of Problems: 3 rounds (one problem per round, increasing difficulty)",
+      "Total Time Duration: 90 minutes (1.5 hours)",
+      "Round-wise Time Split:",
+      "- Round 1: 25 minutes (Debugging)",
+      "- Round 2: 30 minutes (DSA)",
+      "- Round 3: 35 minutes (DSA)",
+      "Individual or Team?: Team event (3 members per team)",
+      "Evaluation Criteria:",
+      "- Correctness of output (primary)",
+      "- Submission time",
+      "- Code efficiency (for final round if needed)"
+    ], duration: "15 Minutes/Team", venue: "Room 222", teamSize: "Team of 2-3",
+    coordinators: [
+      { name: "HARIHARAMAARESAN ", phone: "9384784747 " },
+      { name: "AKASH", phone: "7907474714" }
+    ]
   },
   {
-    icon: Lightbulb, title: "Hackathon",
-    desc: "Build innovative solutions to real-world problems in a timed challenge.",
-    fullDesc: "A high-energy hackathon where teams build working prototypes to solve real-world problems. Bring your laptops, creativity, and caffeine — it's going to be intense!",
-    rules: ["Team of 3-4 members", "Bring your own laptops", "Problem statement given on spot", "Working prototype required"],
-    duration: "3 Hours", venue: "Room 222", teamSize: "Team of 3-4",
+    icon: Network, title: "ALGO CONNECT",
+    desc: "Algo Connect is a logic-based technical event where participants must identify the name of an algorithm by connecting visual clues.",
+    fullDesc: "Algo Connect is a logic-based technical event where participants must identify the name of an algorithm by connecting visual clues. Participants will be shown a series of images, diagrams, or code snippets that represent key characteristics or steps of a well-known algorithm. By analyzing these clues, they must deduce the correct algorithm name. This event tests your understanding of algorithms, pattern recognition skills, and ability to think abstractly. Get ready to connect the dots and crack the code!",
+    rules: [
+      "Team Size: 2 or 3",
+      "Number of Rounds: 3",
+      "Winners will be decided based on points"
+    ], duration: "3 Hours", venue: "Room 222", teamSize: "Team of 3-4",
+    coordinators: [
+      { name: "VELMURUGAN ", phone: "9585532408" },
+      { name: "ASAR JENISA", phone: "7358343982" }
+    ]
   },
   {
-    icon: Globe, title: "Web Design",
-    desc: "Design a stunning website on a given topic within the time limit.",
-    fullDesc: "Showcase your web development skills! Design and develop a responsive website on a surprise topic. Creativity, functionality, and aesthetics all count towards your score.",
-    rules: ["Individual or Team of 2", "Topic given on spot", "HTML, CSS, JS frameworks allowed", "No pre-built templates"],
-    duration: "2 Hours", venue: "Room 222", teamSize: "Individual / Team of 2",
+    icon: Lightbulb, title: "IDEATHON",
+    desc: "Ideathon is a dynamic idea-generation event where participants develop innovative solutions to real-world challenges within a limited time frame.",
+    fullDesc: "Ideathon is a dynamic idea-generation event where participants develop innovative solutions to real-world challenges within a limited time frame. Participants will be presented with a specific problem statement related to technology, society, or the environment. They must brainstorm, collaborate, and create a compelling solution that addresses the problem effectively. This event encourages creativity, critical thinking, and teamwork as participants",
+    rules: [
+      "Open topic that creates a positive impact on society",
+      "Team size: 2–3 members",
+      "Time limit: Round 1 – 3 to 4 minutes per team / Round 2 – 5 minutes per team",
+      "PPT presentation is mandatory",
+      "Ideas only are required",
+      "Judging Criteria:",
+      "- Feasibility",
+      "- Innovation",
+      "- Impact"
+    ], duration: "2 Hours", venue: "Room 222", teamSize: "Individual / Team of 2-3",
+    coordinators: [
+      { name: "AJAY KUMAR", phone: " 8525956361" },
+      { name: "LEENA", phone: "8072867957" }
+    ]
   },
 ];
 
 const nonTechnicalEvents: EventInfo[] = [
   {
-    icon: Gamepad2, title: "Tech Treasure Hunt",
-    desc: "A thrilling hunt blending tech clues with physical challenges.",
-    fullDesc: "An exciting treasure hunt combining technical puzzles, QR codes, and campus exploration. Decode clues, solve riddles, and race against other teams to find the treasure!",
-    rules: ["Team of 3 members", "Follow all clue sequences", "No skipping clues", "First team to finish wins"],
-    duration: "1.5 Hours", venue: "Campus-wide", teamSize: "Team of 3",
+    icon: Mic, title: "SCENE CHAIN",
+    desc: "The Scene Chain Game (Movie Edition) is a fun and interactive activity where players connect scenes using movie titles, characters, or famous moments. Each participant must link one movie scene to another in a logical or creative way, forming a continuous “chain” of movies.This game is perfect for movie lovers and helps improve memory, creativity, and quick thinking.",
+    fullDesc: "The Scene Chain Game (Movie Edition) is a fun and interactive activity where players connect scenes using movie titles, characters, or famous moments. Each participant must link one movie scene to another in a logical or creative way, forming a continuous “chain” of movies.This game is perfect for movie lovers and helps improve memory, creativity, and quick thinking.",
+    rules: [
+      "Team size: 1–3 members only",
+      "Judging Criteria:",
+      "- Creativity – 10 marks",
+      "- Humor – 10 marks",
+      "- Relevance to Topic – 10 marks",
+      "Use of mobile phones or other devices for searching is strictly prohibited (leads to elimination)",
+      "Decision of judges will be final"
+    ], duration: "1.5 Hours", venue: "Campus-wide", teamSize: "Team of 1-3",
   },
   {
-    icon: Mic, title: "Just a Minute (JAM)",
-    desc: "Speak on random topics for one minute without hesitation or repetition.",
-    fullDesc: "The classic JAM session! Speak fluently on a random topic for 60 seconds without hesitation, repetition, or grammatical errors. Quick thinking and confidence are key!",
-    rules: ["Individual participation", "Topic given on the spot", "No repetition or hesitation", "Judges' decision is final"],
-    duration: "1 Hour", venue: "Room 222", teamSize: "Individual",
+    icon: Gamepad2, title: "GAMEVORA",
+    desc: "E-Games (PUBG & Free Fire) is an exciting competitive gaming event featuring popular battle royale games. Participants compete in intense survival matches that test strategy, teamwork, and quick decision-making skills.",
+    fullDesc: "E-Games (PUBG & Free Fire) is an exciting competitive gaming event featuring popular battle royale games. Participants compete in intense survival matches that test strategy, teamwork, and quick decision-making skills.!",
+    rules: [
+      "Available Games:",
+      "• Free Fire (Clash Squad – No rules | Map: Bermuda)",
+      "• PUBG (TDM – No rules)"
+    ], duration: "1 Hour", venue: "Room 222", teamSize: "4",
   },
   {
-    icon: Palette, title: "Meme Wars",
-    desc: "Create the most hilarious and relatable tech memes to win.",
-    fullDesc: "Unleash your inner meme lord! Create the funniest, most creative tech memes on given templates. The audience and judges vote for the best. May the dankest meme win!",
-    rules: ["Individual participation", "Templates provided on spot", "No offensive content", "Audience voting + Judge scoring"],
-    duration: "45 Minutes", venue: "Room 222", teamSize: "Individual",
+    icon: Palette, title: "MEME MASTER",
+    desc: "Unleash your creativity and humor in this fun-filled meme creation contest! Participants must create original memes based on a topic given on the spot. Show your wit, timing, and relatability to win the title of “Meme Master”!",
+    fullDesc: "Unleash your creativity and humor in this fun-filled meme creation contest! Participants must create original memes based on a topic given on the spot. Show your wit, timing, and relatability to win the title of “Meme Master”!",
+    rules: [
+      "Topic will be given on the spot",
+      "Example Topics:",
+      "• College Life",
+      "• Exam Fever",
+      "• Department Moments",
+      "• Trending Technology",
+      "Tools Allowed: Mobile phones, Laptop, Canva / Editing Apps, Basic meme templates",
+      "Limited internet usage allowed only for tools (not for copying memes)",
+      "Team size: Individual or 2 members only",
+      "Judging Criteria:",
+      "- Creativity – 10 marks",
+      "- Humor – 10 marks",
+      "- Relevance to Topic – 10 marks",
+      "Only original content must be created",
+      "Decision of judges will be final"
+    ], duration: "45 Minutes", venue: "Room 222", teamSize: "Individual",
+    coordinators: [
+      { name: "NIVETHIKA", phone: "9344756639 " },
+      { name: "MATHAN KUMAR ", phone: "6383432475" }
+    ]
   },
   {
-    icon: Users, title: "Connections",
+    icon: Users, title: "ADAPZ",
     desc: "A team-based puzzle game testing communication and strategy.",
     fullDesc: "A fun team puzzle game inspired by NYT Connections! Group 16 items into 4 categories using logic, communication, and teamwork. Strategize with your partner to crack the code!",
-    rules: ["Team of 2 members", "Multiple rounds", "Limited attempts per round", "Time-based scoring"],
-    duration: "1 Hour", venue: "Room 222", teamSize: "Team of 2",
+    rules: [
+      "Team Composition: 2–5 members per team",
+      "Time Constraints: 2–3 minutes to prepare and 3–4 minutes to perform (3-minute performance limit)",
+      "Product/Topic Assignment: Products may be random or unusual and will be assigned on the spot to test spontaneous creativity",
+      "Performance Elements: Teams may use catchy taglines, jingles, skits, and props (if allowed) to make the advertisement memorable",
+      "Content Restrictions: No obscene or offensive language is allowed",
+      "Judging Criteria:",
+      "- Originality",
+      "- Creativity",
+      "- Humor",
+      "- Marketing effectiveness",
+      "Finality: Judges' decision is final and binding"
+    ], duration: "1 Hour", venue: "Room 222", teamSize: "Team of 2",
+    coordinators: [
+      { name: "SANTHOSH", phone: "9025112563 " },
+      { name: "SONIKA", phone: "9042694006" }
+    ]
   },
   {
-    icon: Database, title: "Data Detective",
-    desc: "Analyze datasets and solve mysteries hidden within the data.",
-    fullDesc: "Put on your detective hat and dive into real-world datasets! Find patterns, anomalies, and insights to solve the mystery. Data analysis meets storytelling in this unique event.",
-    rules: ["Team of 2 members", "Dataset provided on spot", "Tools: Excel, Python, or any analysis tool", "Present findings in 5 minutes"],
-    duration: "1.5 Hours", venue: "Room 222", teamSize: "Team of 2",
+
+    icon: Trophy, title: "IPL AUCTION",
+    desc: "Compete in an IPL Quiz and build your dream team in a high-energy mock auction challenge.",
+    fullDesc: "The event begins with a 15-minute IPL quiz to select the top teams. Each team can have a maximum of 3 members. The qualified teams then participate in a mock IPL auction with a virtual budget of ₹120 crore to build a squad of 13 players. The winner is determined using an AI-based scoring system that evaluates overall team strength based on player performance.",
+    rules: [
+      "Activity | Duration",
+      "• IPL Quiz – 15 Minutes",
+      "• Auction – 75 Minutes",
+      "• Total – 90 Minutes"
+    ], duration: "1 Hours", venue: "Room 222", teamSize: "Team of 3",
+    coordinators: [
+      { name: " HARIPRASATH", phone: "7305155011" },
+      { name: "YUVARAJA ", phone: "9842152667" }
+    ]
   },
 ];
 
-const GOOGLE_FORM_URL = "https://forms.google.com/your-form-link-here";
+const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfuzDK_roSBVUFoXV1GdnyMdXccZDOcojCuDFAh3tjh1PgfNQ/viewform?usp=publish-editor";
 
 interface EventCardProps {
   event: EventInfo;
@@ -181,6 +298,27 @@ const EventDialog = ({ event, onClose }: EventDialogProps) => {
             ))}
           </ul>
         </div>
+
+        {event.coordinators && (
+          <div className="mb-6">
+            <h4 className="font-display text-sm font-bold text-foreground mb-2 uppercase tracking-wider">
+              Event Coordinators
+            </h4>
+
+            <div className="space-y-2">
+              {event.coordinators.map((coord, i) => (
+                <a
+                  key={i}
+                  href={`tel:${coord.phone}`}
+                  className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                >
+                  <Phone className="w-4 h-4 text-primary" />
+                  {coord.name} : {coord.phone}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
 
         <a
           href={GOOGLE_FORM_URL}

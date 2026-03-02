@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { Phone, Mail, MapPin } from "lucide-react";
 
 const coordinators = [
-  { name: "Arun Kumar", role: "Student Coordinator", phone: "+91 98765 43210", email: "arun@rvstech.edu" },
-  { name: "Priya Sharma", role: "Student Coordinator", phone: "+91 98765 43211", email: "priya@rvstech.edu" },
-  { name: "Karthik Raja", role: "Event Head", phone: "+91 98765 43212", email: "karthik@rvstech.edu" },
+  { name: "Thiruchandru", role: "Student Coordinator", phone: "+91 6385775047", email: "callmethiru7@gmail.com" },
+  { name: "Moumiththa", role: "Student Coordinator", phone: "+91 6383539621", email: "priya@rvstech.edu" },
+  { name: "Balaji", role: "Event Head", phone: "+91 9940933866", email: "balaji@rvstech.edu" },
 ];
 
 const ContactSection = () => (
@@ -51,6 +51,22 @@ const ContactSection = () => (
         <p className="text-muted-foreground text-sm font-body">Room No 222 – Seminar Hall</p>
       </motion.div>
     </div>
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.5 }}
+  className="text-center"
+>
+  <a
+    href="https://www.google.com/maps/place/RVS+Technical+Campus,+Coimbatore"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-block px-6 py-3 bg-primary text-primary-foreground rounded-lg font-display font-semibold hover:opacity-90 transition"
+  >
+    📍 RVS Technical Campus, Coimbatore – View Location
+  </a>
+</motion.div>
   </section>
 );
 

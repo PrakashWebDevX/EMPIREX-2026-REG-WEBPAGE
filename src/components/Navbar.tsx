@@ -24,7 +24,7 @@ const Navbar = () => {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-background/80 backdrop-blur-xl border-b border-border/50" : ""}`}>
       <div className="container mx-auto max-w-6xl flex items-center justify-between px-4 py-3">
         <a href="#" className="flex items-center gap-2">
-          <img src={aiEmpireLogo} alt="Logo" className="w-8 h-8" />
+          <img src={aiEmpireLogo} alt="Logo" className="w-9 h-9" />
           <span className="font-display text-sm font-bold gold-gradient-text hidden sm:block">EMPIREX</span>
         </a>
 
