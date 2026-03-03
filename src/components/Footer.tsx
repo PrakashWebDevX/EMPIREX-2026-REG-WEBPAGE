@@ -60,7 +60,7 @@ const Footer = () => (
           <Instagram className="w-5 h-5 text-black" />
         </a>
 
-        {/* Email */}
+        {/* Email */} 
         <a
           href="https://mail.google.com/mail/u/0/?compose=new#search/empirex26.rvstcc%40gmail.com?compose=new"
           className="p-3 rounded-full bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-700 
