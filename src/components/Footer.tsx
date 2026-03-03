@@ -1,5 +1,5 @@
 import aiEmpireLogo from "@/assets/ai-empire-logo.png";
-import { Instagram, Mail, MessageCircle} from "lucide-react";
+import { MessageCircle, Instagram, Mail } from "lucide-react";
 const Footer = () => (
   <footer className="border-t border-border/50 py-8 px-4">
     <div className="container mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-6">
@@ -29,18 +29,22 @@ const Footer = () => (
           </a>
         ))}
       </div>
-      
+
 
       {/* Social Icons */}
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-5">
+
         {/* WhatsApp */}
         <a
-          href=" https://chat.whatsapp.com/DhmYaljBQ8z9HMKYfToMlQ?mode=gi_t"
+          href="https://chat.whatsapp.com/DhmYaljBQ8z9HMKYfToMlQ?mode=gi_t"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-muted-foreground hover:text-green-500 transition-colors"
+          className="p-3 rounded-full bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-700 
+               shadow-[0_0_15px_rgba(255,215,0,0.6)] 
+               hover:scale-110 hover:shadow-[0_0_25px_rgba(255,215,0,0.9)]
+               transition-all duration-300"
         >
-          <MessageCircle className="w-5 h-5" />
+          <MessageCircle className="w-5 h-5 text-black" />
         </a>
 
         {/* Instagram */}
@@ -48,20 +52,26 @@ const Footer = () => (
           href="https://www.instagram.com/_ai_empire__?igsh=ajlmd2t3bTJ2czR3"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-muted-foreground hover:text-pink-500 transition-colors"
+          className="p-3 rounded-full bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-700 
+               shadow-[0_0_15px_rgba(255,215,0,0.6)] 
+               hover:scale-110 hover:shadow-[0_0_25px_rgba(255,215,0,0.9)]
+               transition-all duration-300"
         >
-          <Instagram className="w-5 h-5" />
+          <Instagram className="w-5 h-5 text-black" />
         </a>
 
         {/* Email */}
         <a
           href="https://mail.google.com/mail/u/0/?compose=new#search/empirex26.rvstcc%40gmail.com?compose=new"
-          className="text-muted-foreground hover:text-blue-500 transition-colors"
+          className="p-3 rounded-full bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-700 
+               shadow-[0_0_15px_rgba(255,215,0,0.6)] 
+               hover:scale-110 hover:shadow-[0_0_25px_rgba(255,215,0,0.9)]
+               transition-all duration-300"
         >
-          <Mail className="w-5 h-5" />
+          <Mail className="w-5 h-5 text-black" />
         </a>
-      </div>
 
+      </div>
     </div>
   </footer>
 );
