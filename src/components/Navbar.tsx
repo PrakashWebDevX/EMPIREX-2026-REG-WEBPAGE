@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { MapPin, Menu, X } from "lucide-react";
 import aiEmpireLogo from "@/assets/ai-empire-logo.png";
 
 const navLinks = [
@@ -8,6 +8,7 @@ const navLinks = [
   { label: "Prizes", href: "#prizes" },
   { label: "Register", href: "#register" },
   { label: "Contact", href: "#contact" },
+  { label: "Location", href: "#location" }, 
 ];
 
 const Navbar = () => {
@@ -29,11 +30,16 @@ const Navbar = () => {
         </a>
 
         <div className="hidden md:flex items-center gap-6">
-          {navLinks.map((l) => (
-            <a key={l.label} href={l.href} className="text-sm text-muted-foreground hover:text-primary transition-colors font-body">
-              {l.label}
-            </a>
-          ))}
+{navLinks.map((l) => (
+  <a
+    key={l.label}
+    href={l.href}
+    className="text-sm text-muted-foreground hover:text-primary transition-colors font-body flex items-center gap-1"
+  >
+    {l.label === "Location" && <MapPin className="w-4 h-4" />}
+    {l.label}
+  </a>
+))}
         </div>
 
         <button onClick={() => setOpen(!open)} className="md:hidden text-foreground">
