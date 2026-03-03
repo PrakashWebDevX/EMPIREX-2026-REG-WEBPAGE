@@ -36,7 +36,7 @@ const Footer = () => (
 
         {/* WhatsApp */}
         <a
-          href="https://chat.whatsapp.com/DhmYaljBQ8z9HMKYfToMlQ?mode=gi_t"
+          href="https://chat.whatsapp.com/EhQiqlFwG1C1ACHiUHsgob"
           target="_blank"
           rel="noopener noreferrer"
           className="p-3 rounded-full bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-700 
@@ -60,7 +60,7 @@ const Footer = () => (
           <Instagram className="w-5 h-5 text-black" />
         </a>
 
-        {/* Email */} 
+        {/* Email */}
         <a
           href="https://mail.google.com/mail/u/0/?compose=new#search/empirex26.rvstcc%40gmail.com?compose=new"
           className="p-3 rounded-full bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-700 
