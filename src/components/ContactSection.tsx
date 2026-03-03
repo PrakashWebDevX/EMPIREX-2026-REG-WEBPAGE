@@ -38,6 +38,8 @@ const ContactSection = () => (
         ))}
       </div>
 
+      {/* location anchor for navbar link; scroll-margin allows fixed header offset */}
+      <div id="location" className="scroll-mt-20">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -50,6 +52,7 @@ const ContactSection = () => (
         <p className="text-muted-foreground text-sm font-body">Coimbatore, Tamil Nadu, India</p>
         <p className="text-muted-foreground text-sm font-body">Room No 222 – Seminar Hall</p>
       </motion.div>
+      </div>
     </div>
 <motion.div
   initial={{ opacity: 0, y: 20 }}
@@ -62,7 +65,12 @@ const ContactSection = () => (
     href="https://www.google.com/maps/place/RVS+Technical+Campus,+Coimbatore"
     target="_blank"
     rel="noopener noreferrer"
-    className="inline-block px-6 py-3 bg-primary text-primary-foreground rounded-lg font-display font-semibold hover:opacity-90 transition"
+    className="inline-block px-8 py-4 
+               bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-700
+               text-black font-display font-semibold rounded-xl
+               shadow-[0_0_20px_rgba(255,215,0,0.6)]
+               hover:scale-105 hover:shadow-[0_0_35px_rgba(255,215,0,0.9)]
+               transition-all duration-300"
   >
     📍 RVS Technical Campus, Coimbatore – View Location
   </a>
