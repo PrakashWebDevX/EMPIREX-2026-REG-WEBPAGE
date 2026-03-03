@@ -76,32 +76,21 @@ const HeroSection = () => {
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-center mb-6 bg-gradient-to-r from-yellow-400 via-amber-500 to-yellow-600 bg-clip-text text-transparent drop-shadow-lg tracking-wide">
             DEPARTMENT OF ARTIFICIAL INTELLIGENCE & DATA SCIENCE
           </h2>
-          <img src={empirexTitle} alt="EMPIREX" className="h-55 md:h-84 lg:h-88 mb-5 drop-shadow-5xl" />
-
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-6xl md:text-8xl font-display text-sm font-bold gold-gradient-text hidden sm:block"
-            style={{
-              fontFamily: "Bebas Neue, sans-serif",
-              textShadow: "0px 4px 20px rgba(0,0,0,0.6)"
-            }}>
-            2K26
-          </motion.p>
+          <img src={empirexTitle} alt="EMPIREX" className="h-85 md:h-94 lg:h-98 mb-5 drop-shadow-5xl" />
 
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.6 }}
-            className="text-sm md:text-lg text-muted-foreground font-body max-w-xl mb-2"
+            className="text-xl md:text-2xl font-semibold text-foreground mb-2 tracking-wide"
           >
             National Level Technical Symposium
           </motion.p>
-          <p className="text-xs md:text-sm text-muted-foreground font-body mb-1">
+          <p className="text-xs md:text-sm text-muted-foreground font-body font-bold mb-1">
             Department of B.Tech AI &amp; Data Science
           </p>
-          <p className="text-xs md:text-sm text-muted-foreground font-body mb-8">
+
+          <p className="text-xs md:text-sm text-muted-foreground font-body font-bold mb-8">
             RVS Technical Campus, Coimbatore
           </p>
 
@@ -120,9 +109,9 @@ const HeroSection = () => {
             </button>
           </motion.div>
 
-          <p className="mt-6 text-xs text-muted-foreground font-body">
-            📅 March 17, 2026 &nbsp;|&nbsp; 📍 Room No 222 – Seminar Hall
-          </p>
+<p className="mt-6 text-xl md:text-2xl text-muted-foreground font-body">
+  📅 March 17, 2026 &nbsp;|&nbsp; 📍 Room No 222 – Seminar Hall
+</p>
         </motion.div>
       </div>
     </section>

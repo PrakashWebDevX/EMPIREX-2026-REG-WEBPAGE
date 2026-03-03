@@ -3,7 +3,7 @@ import { Phone, Mail, MapPin, Instagram, MessageCircle } from "lucide-react";
 
 const coordinators = [
   { name: "Thiruchandru", role: "Student Coordinator", phone: "+91 6385775047", email: "callmethiru7@gmail.com" },
-  { name: "Moumiththa", role: "Student Coordinator", phone: "+91 6383539621", email: "priya@rvstech.edu" },
+  { name: "Moumiththa", role: "Student Coordinator", phone: "+91 6383539621", email: "moumiamir@gmail.com" },
   { name: "Balaji", role: "Event Head", phone: "+91 9940933866", email: "balaji@rvstech.edu" },
 ];
 

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Code, Brain, Cpu, Lightbulb, Gamepad2, Mic, Palette, Users, X, Clock, MapPin, Trophy, Globe, Database, Phone,FileText,Network,ShieldAlert, } from "lucide-react";
+import { Code,Film, Brain, Cpu, Lightbulb, Gamepad2, Mic, Palette, Users, X, Clock, MapPin, Trophy, Globe, Database, Phone,FileText,Network,ShieldAlert, } from "lucide-react";
 interface EventInfo {
   icon: React.ElementType;
   title: string;
@@ -117,7 +117,7 @@ const technicalEvents: EventInfo[] = [
 
 const nonTechnicalEvents: EventInfo[] = [
   {
-    icon: Mic, title: "SCENE CHAIN",
+    icon: Film , title: "SCENE CHAIN",
     desc: "The Scene Chain Game (Movie Edition) is a fun and interactive activity where players connect scenes using movie titles, characters, or famous moments. Each participant must link one movie scene to another in a logical or creative way, forming a continuous “chain” of movies.This game is perfect for movie lovers and helps improve memory, creativity, and quick thinking.",
     fullDesc: "The Scene Chain Game (Movie Edition) is a fun and interactive activity where players connect scenes using movie titles, characters, or famous moments. Each participant must link one movie scene to another in a logical or creative way, forming a continuous “chain” of movies.This game is perfect for movie lovers and helps improve memory, creativity, and quick thinking.",
     rules: [
