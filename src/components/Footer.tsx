@@ -35,7 +35,7 @@ const Footer = () => (
       <div className="flex items-center gap-4">
         {/* WhatsApp */}
         <a
-          href="https://wa.me/916385775047"
+          href=" https://chat.whatsapp.com/DhmYaljBQ8z9HMKYfToMlQ?mode=gi_t"
           target="_blank"
           rel="noopener noreferrer"
           className="text-muted-foreground hover:text-green-500 transition-colors"
@@ -45,7 +45,7 @@ const Footer = () => (
 
         {/* Instagram */}
         <a
-          href="https://instagram.com/yourpage"
+          href="https://www.instagram.com/rvstechnicalcampus?igsh=bHd1MXMzdWpqZ2h4"
           target="_blank"
           rel="noopener noreferrer"
           className="text-muted-foreground hover:text-pink-500 transition-colors"
@@ -55,7 +55,7 @@ const Footer = () => (
 
         {/* Email */}
         <a
-          href="mailto:youremail@rvstech.edu"
+          href="https://mail.google.com/mail/u/0/?compose=new#search/empirex26.rvstcc%40gmail.com?compose=new"
           className="text-muted-foreground hover:text-blue-500 transition-colors"
         >
           <Mail className="w-5 h-5" />
