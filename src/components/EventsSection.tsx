@@ -32,7 +32,7 @@ const technicalEvents: EventInfo[] = [
       "       -Presentation Skills",
       "       -Response to Questions"
     ],
-    duration: "2 Hours", venue: "Room 222", teamSize: "Individual", coordinators: [
+    duration: "1.5 Hours", venue: "Room 222", teamSize: "Individual", coordinators: [
       { name: "SUDHARSAN", phone: "9655944819" },
       { name: "SANJAI", phone: "9626883380" }
     ]
@@ -73,7 +73,7 @@ const technicalEvents: EventInfo[] = [
       "- Correctness of output (primary)",
       "- Submission time",
       "- Code efficiency (for final round if needed)"
-    ], duration: "15 Minutes/Team", venue: "Room 222", teamSize: "Team of 2-3",
+    ], duration: "1.5 Hours", venue: "Room 222", teamSize: "Team of 2-3",
     coordinators: [
       { name: "HARIHARAMAARESAN ", phone: "9384784747 " },
       { name: "AKASH", phone: "7907474714" }
@@ -87,7 +87,7 @@ const technicalEvents: EventInfo[] = [
       "Team Size: 2 or 3",
       "Number of Rounds: 3",
       "Winners will be decided based on points"
-    ], duration: "3 Hours", venue: "Room 222", teamSize: "Team of 3-4",
+    ], duration: "1.5 Hours", venue: "Room 222", teamSize: "Team of 3-4",
     coordinators: [
       { name: "VELMURUGAN ", phone: "9585532408" },
       { name: "ASAR JENISA", phone: "7358343982" }
@@ -107,7 +107,7 @@ const technicalEvents: EventInfo[] = [
       "- Feasibility",
       "- Innovation",
       "- Impact"
-    ], duration: "2 Hours", venue: "Room 222", teamSize: "Individual / Team of 2-3",
+    ], duration: "1.5 Hours", venue: "Room 222", teamSize: "Individual / Team of 2-3",
     coordinators: [
       { name: "AJAY KUMAR", phone: " 8525956361" },
       { name: "LEENA", phone: "8072867957" }
@@ -138,7 +138,7 @@ const nonTechnicalEvents: EventInfo[] = [
       "Available Games:",
       "• Free Fire (Clash Squad – No rules | Map: Bermuda)",
       "• PUBG (TDM – No rules)"
-    ], duration: "1 Hour", venue: "Room 222", teamSize: "4",
+    ], duration: "1.5 Hours", venue: "Room 222", teamSize: "4",
   },
   {
     icon: Palette, title: "MEME MASTER",
@@ -160,7 +160,7 @@ const nonTechnicalEvents: EventInfo[] = [
       "- Relevance to Topic – 10 marks",
       "Only original content must be created",
       "Decision of judges will be final"
-    ], duration: "45 Minutes", venue: "Room 222", teamSize: "Individual",
+    ], duration: "1.5 Hours", venue: "Room 222", teamSize: "Individual",
     coordinators: [
       { name: "NIVETHIKA", phone: "9344756639 " },
       { name: "MATHAN KUMAR ", phone: "6383432475" }
@@ -182,7 +182,7 @@ const nonTechnicalEvents: EventInfo[] = [
       "- Humor",
       "- Marketing effectiveness",
       "Finality: Judges' decision is final and binding"
-    ], duration: "1 Hour", venue: "Room 222", teamSize: "Team of 2",
+    ], duration: "1.5 Hours", venue: "Room 222", teamSize: "Team of 2",
     coordinators: [
       { name: "SANTHOSH", phone: "9025112563 " },
       { name: "SONIKA", phone: "9042694006" }
@@ -198,7 +198,7 @@ const nonTechnicalEvents: EventInfo[] = [
       "• IPL Quiz – 15 Minutes",
       "• Auction – 75 Minutes",
       "• Total – 90 Minutes"
-    ], duration: "1 Hours", venue: "Room 222", teamSize: "Team of 3",
+    ], duration: "1.5 Hours", venue: "Room 222", teamSize: "Team of 3",
     coordinators: [
       { name: " HARIPRASATH", phone: "7305155011" },
       { name: "YUVARAJA ", phone: "9842152667" }
