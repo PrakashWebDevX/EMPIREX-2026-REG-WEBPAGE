@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Trophy, Award, Medal } from "lucide-react";
+import { Trophy, Award, Medal, Utensils } from "lucide-react";
 
 const PrizesSection = () => (
   <section id="prizes" className="py-20 px-4">
@@ -14,6 +14,12 @@ const PrizesSection = () => (
           { icon: Trophy, title: "Winners", desc: "Exciting cash prizes and trophies for event winners.", color: "text-primary" },
           { icon: Medal, title: "Runners Up", desc: "Medals and goodies for the runners-up in every event.", color: "text-primary/80" },
           { icon: Award, title: "All Participants", desc: "Certificate of participation for every registered attendee.", color: "text-primary/60" },
+                    {
+            icon: Utensils,
+            title: "Food & Refreshments",
+            desc: "Delicious food and refreshing drinks will be provided for all participants.",
+            color: "text-primary/70",
+          },
         ].map((item, i) => (
           <motion.div
             key={item.title}
