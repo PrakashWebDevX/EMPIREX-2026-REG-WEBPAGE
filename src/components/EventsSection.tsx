@@ -129,6 +129,10 @@ const nonTechnicalEvents: EventInfo[] = [
       "Use of mobile phones or other devices for searching is strictly prohibited (leads to elimination)",
       "Decision of judges will be final"
     ], duration: "1.5 Hours", venue: "Campus-wide", teamSize: "Team of 1-3",
+    coordinators: [
+      { name: "VISHAL", phone: "8610458741" },
+      { name: "JEEVA NANTHAN", phone: "8526940562" }
+    ]
   },
   {
     icon: Gamepad2, title: "GAMEVORA",
@@ -138,7 +142,11 @@ const nonTechnicalEvents: EventInfo[] = [
       "Available Games:",
       "• Free Fire (Clash Squad – No rules | Map: Bermuda)",
       "• PUBG (TDM – No rules)"
-    ], duration: "1.5 Hours", venue: "Room 222", teamSize: "4",
+    ], duration: "1.5 Hours", venue: "Room 222", teamSize: "Team of 4",
+    coordinators: [
+      { name: "SAMEER", phone: "6383150270 " },
+      { name: "LOHITH", phone: "9042555690" }
+    ]
   },
   {
     icon: Palette, title: "MEME MASTER",
