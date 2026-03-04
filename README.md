@@ -1,73 +1,122 @@
-# Welcome to your Lovable project
+# 🚀 EMPIREX 2026 – Registration Website
 
-## Project info
+Official Registration Website for **EMPIREX 2K26** Event.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+🔗 Live Website: https://empirex-2k26.vercel.app/  
+📂 GitHub Repository: https://github.com/PrakashWebDevX/EMPIREX-2026-REG-WEBPAGE
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 📌 About The Project
 
-**Use Lovable**
+EMPIREX 2026 is a modern event registration web application built to provide a smooth and responsive experience for participants.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+This project focuses on:
 
-Changes made via Lovable will be committed automatically to this repo.
+- Clean and modern UI
+- Fully responsive design
+- Smooth navigation
+- Easy registration process
+- Deployment-ready structure
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🛠️ Tech Stack
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **HTML5**
+- **CSS3**
+- **JavaScript**
+- **Vercel** (Deployment)
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## ✨ Features
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- 🎯 Event registration form
+- 📱 Mobile-friendly responsive design
+- ⚡ Fast loading performance
+- 🎨 Attractive and modern UI layout
+- 🌐 Hosted online using Vercel
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+## 📁 Project Structure
+
+```
+EMPIREX-2026-REG-WEBPAGE/
+│
+├── index.html
+├── style.css
+├── script.js
+└── assets/
 ```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🚀 Getting Started (Run Locally)
 
-**Use GitHub Codespaces**
+1. Clone the repository
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```
+git clone https://github.com/PrakashWebDevX/EMPIREX-2026-REG-WEBPAGE.git
+```
 
-## What technologies are used for this project?
+2. Navigate into the project folder
 
-This project is built with:
+```
+cd EMPIREX-2026-REG-WEBPAGE
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+3. Open `index.html` in your browser
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+## 🌍 Deployment
 
-## Can I connect a custom domain to my Lovable project?
+This project is deployed using **Vercel**.
 
-Yes, you can!
+To deploy your own version:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+1. Push your code to GitHub
+2. Go to https://vercel.com
+3. Import your GitHub repository
+4. Click Deploy
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+
+## 📸 Preview
+
+Live Demo:  
+👉 https://empirex-2k26.vercel.app/
+
+---
+
+## 🤝 Contributing
+
+Contributions, suggestions, and improvements are welcome.
+
+If you'd like to contribute:
+
+1. Fork the repository
+2. Create a new branch
+3. Commit your changes
+4. Submit a pull request
+
+---
+
+## 📄 License
+
+This project is open-source and available under the MIT License.
+
+---
+
+## 👨‍💻 Developed By
+
+**Prakash**  
+Web Developer | AI Enthusiast | Tech Explorer  
+
+GitHub: https://github.com/PrakashWebDevX
+
+---
+
+⭐ If you like this project, don’t forget to give it a star!
