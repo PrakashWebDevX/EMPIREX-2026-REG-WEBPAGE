@@ -2,7 +2,7 @@
 
 Official Registration Website for **EMPIREX 2K26** Event.
 
-🔗 Live Website: https://empirex-2k26.vercel.app/  
+🔗 Live Website: https://empirex-2k26.vercel.app  
 📂 GitHub Repository: https://github.com/PrakashWebDevX/EMPIREX-2026-REG-WEBPAGE
 
 ---
