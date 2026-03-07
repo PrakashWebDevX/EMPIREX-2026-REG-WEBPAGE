@@ -49,7 +49,7 @@ const Footer = () => (
 
         {/* Instagram */}
         <a
-          href="https://www.instagram.com/_ai_empire__?igsh=ajlmd2t3bTJ2czR3"
+          href="https://www.instagram.com/_ai_empire__"
           target="_blank"
           rel="noopener noreferrer"
           className="p-3 rounded-full bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-700 
@@ -62,7 +62,7 @@ const Footer = () => (
 
         {/* Email */}
         <a
-          href="https://mail.google.com/mail/u/0/?compose=new#search/empirex26.rvstcc%40gmail.com?compose=new"
+          href="mailto:empirex26.rvstcc@gmail.com"
           className="p-3 rounded-full bg-gradient-to-br from-yellow-400 via-yellow-500 to-yellow-700 
                shadow-[0_0_15px_rgba(255,215,0,0.6)] 
                hover:scale-110 hover:shadow-[0_0_25px_rgba(255,215,0,0.9)]
