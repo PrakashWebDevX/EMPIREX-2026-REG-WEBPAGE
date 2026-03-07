@@ -84,7 +84,7 @@ const HeroSection = () => {
             transition={{ delay: 0.5, duration: 0.6 }}
             className="text-xl md:text-2xl font-semibold text-foreground mb-2 tracking-wide"
           >
-            National Level Technical Symposium
+            NATIONAL LEVEL TECHNICAL SYMPOSIUM
           </motion.p>
           <p className="text-xs md:text-sm text-muted-foreground font-body font-bold mb-1">
             Department of B.Tech AI &amp; Data Science
