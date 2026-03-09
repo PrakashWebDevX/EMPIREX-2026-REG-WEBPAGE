@@ -131,7 +131,7 @@ const nonTechnicalEvents: EventInfo[] = [
     ], duration: "1.5 Hours", venue: "Campus-wide", teamSize: "Team of 1-3",
     coordinators: [
       { name: "VISHAL", phone: "8610458741" },
-      { name: "JEEVA NANTHAN", phone: "8526940562" }
+      { name: "JEEVAANAND", phone: "8526940562" }
     ]
   },
   {
