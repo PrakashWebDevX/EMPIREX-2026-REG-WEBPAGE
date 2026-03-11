@@ -142,7 +142,7 @@ const nonTechnicalEvents: EventInfo[] = [
       "Available Games:",
       "• Free Fire (Clash Squad – No rules | Map: Bermuda)",
       "• PUBG (TDM – No rules)"
-    ], duration: "1.5 Hours", venue: "Room 222", teamSize: "Team of 4",
+    ], duration: "1.5 Hours", venue: "Room 222", teamSize: "Team of 4(Per Head ₹150)",
     coordinators: [
       { name: "SAMEER", phone: "6383150270 " },
       { name: "LOHITH", phone: "9042555690" }
