@@ -140,7 +140,7 @@ const nonTechnicalEvents: EventInfo[] = [
     fullDesc: "E-Games (PUBG & Free Fire) is an exciting competitive gaming event featuring popular battle royale games. Participants compete in intense survival matches that test strategy, teamwork, and quick decision-making skills.!",
     rules: [
       "Available Games:",
-      "• Free Fire (Clash Squad / Battle Ground– No rules | Map: Bermuda)",
+      "• Free Fire (Clash Squad / Battle Royal– No rules | Map: Bermuda)",
       "• PUBG (TDM – No rules)"
     ], duration: "1.5 Hours", venue: "Room 222", teamSize: "Team of 4  (Per Head ₹150)",
     coordinators: [
