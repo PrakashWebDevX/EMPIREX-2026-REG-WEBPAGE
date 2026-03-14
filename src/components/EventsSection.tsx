@@ -84,7 +84,7 @@ const technicalEvents: EventInfo[] = [
     desc: "Algo Connect is a logic-based technical event where participants must identify the name of an algorithm by connecting visual clues.",
     fullDesc: "Algo Connect is a logic-based technical event where participants must identify the name of an algorithm by connecting visual clues. Participants will be shown a series of images, diagrams, or code snippets that represent key characteristics or steps of a well-known algorithm. By analyzing these clues, they must deduce the correct algorithm name. This event tests your understanding of algorithms, pattern recognition skills, and ability to think abstractly. Get ready to connect the dots and crack the code!",
     rules: [
-      "Team Size: 2 or 3",
+      "Team Size: 2 ",
       "Number of Rounds: 3",
       "Winners will be decided based on points"
     ], duration: "1.5 Hours", venue: "Room 222", teamSize: "Team of 3-4",
