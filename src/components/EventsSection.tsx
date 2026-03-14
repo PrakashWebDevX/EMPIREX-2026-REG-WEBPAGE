@@ -87,7 +87,7 @@ const technicalEvents: EventInfo[] = [
       "Team Size: 2 ",
       "Number of Rounds: 3",
       "Winners will be decided based on points"
-    ], duration: "1.5 Hours", venue: "Room 222", teamSize: "Team of 3-4",
+    ], duration: "1.5 Hours", venue: "Room 222", teamSize: "Team of 2",
     coordinators: [
       { name: "VELMURUGAN ", phone: "9585532408" },
       { name: "ASAR JENISA", phone: "7358343982" }
