@@ -180,7 +180,9 @@ const nonTechnicalEvents: EventInfo[] = [
     fullDesc: "A fun team puzzle game inspired by NYT Connections! Using logic, communication, and teamwork. Strategize with your partner to crack the code!",
     rules: [
       "Team Composition: 2–5 members per team",
-      "Total Round: 2 | First Round: Open Content | Second round: Fixed Content(On The Spot)",
+      "Total Round: 2",
+      "1.First Round: Open Content",
+      "2.Second round: Fixed Content(On The Spot)",
       "Time Constraints: 2–3 minutes to prepare and 3–4 minutes to perform (3-minute performance limit)",
       "Product/Topic Assignment: Products may be random or unusual and will be assigned on the spot to test spontaneous creativity",
       "Performance Elements: Teams may use catchy taglines, jingles, skits, and props (if allowed) to make the advertisement memorable",
