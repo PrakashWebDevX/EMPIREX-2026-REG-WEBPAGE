@@ -46,7 +46,7 @@ const technicalEvents: EventInfo[] = [
       "No use of mobile phones during the quiz",
       "The quiz consists of 3 rounds",
       "Questions will be based on general technical domains",
-      "Judges’ decision is final",
+      "Judges' decision is final",
       "Any malpractice leads to disqualification"
     ],
     duration: "1.5 Hours", venue: "Room 222", teamSize: "Team of 2", coordinators: [
@@ -118,8 +118,8 @@ const technicalEvents: EventInfo[] = [
 const nonTechnicalEvents: EventInfo[] = [
   {
     icon: Film , title: "SCENE CHAIN",
-    desc: "The Scene Chain Game (Movie Edition) is a fun and interactive activity where players connect scenes using movie titles, characters, or famous moments. Each participant must link one movie scene to another in a logical or creative way, forming a continuous “chain” of movies.This game is perfect for movie lovers and helps improve memory, creativity, and quick thinking.",
-    fullDesc: "The Scene Chain Game (Movie Edition) is a fun and interactive activity where players connect scenes using movie titles, characters, or famous moments. Each participant must link one movie scene to another in a logical or creative way, forming a continuous “chain” of movies.This game is perfect for movie lovers and helps improve memory, creativity, and quick thinking.",
+    desc: "The Scene Chain Game (Movie Edition) is a fun and interactive activity where players connect scenes using movie titles, characters, or famous moments. Each participant must link one movie scene to another in a logical or creative way, forming a continuous "chain" of movies.This game is perfect for movie lovers and helps improve memory, creativity, and quick thinking.",
+    fullDesc: "The Scene Chain Game (Movie Edition) is a fun and interactive activity where players connect scenes using movie titles, characters, or famous moments. Each participant must link one movie scene to another in a logical or creative way, forming a continuous "chain" of movies.This game is perfect for movie lovers and helps improve memory, creativity, and quick thinking.",
     rules: [
       "Team size: 1–3 members only",
       "Judging Criteria:",
@@ -150,8 +150,8 @@ const nonTechnicalEvents: EventInfo[] = [
   },
   {
     icon: Palette, title: "MEME MASTER",
-    desc: "Unleash your creativity and humor in this fun-filled meme creation contest! Participants must create original memes based on a topic given on the spot. Show your wit, timing, and relatability to win the title of “Meme Master”!",
-    fullDesc: "Unleash your creativity and humor in this fun-filled meme creation contest! Participants must create original memes based on a topic given on the spot. Show your wit, timing, and relatability to win the title of “Meme Master”!",
+    desc: "Unleash your creativity and humor in this fun-filled meme creation contest! Participants must create original memes based on a topic given on the spot. Show your wit, timing, and relatability to win the title of "Meme Master"!",
+    fullDesc: "Unleash your creativity and humor in this fun-filled meme creation contest! Participants must create original memes based on a topic given on the spot. Show your wit, timing, and relatability to win the title of "Meme Master"!",
     rules: [
       "Topic will be given on the spot",
       "Example Topics:",
@@ -200,7 +200,6 @@ const nonTechnicalEvents: EventInfo[] = [
     ]
   },
   {
-
     icon: Trophy, title: "IPL AUCTION",
     desc: "Compete in an IPL Quiz and build your dream team in a high-energy mock auction challenge.",
     fullDesc: "The event begins with a 15-minute IPL quiz to select the top teams. Each team can have a maximum of 3 members. The qualified teams then participate in a mock IPL auction with a virtual budget of ₹120 crore to build a squad of 13 players. The winner is determined using an AI-based scoring system that evaluates overall team strength based on player performance.",
@@ -216,8 +215,6 @@ const nonTechnicalEvents: EventInfo[] = [
     ]
   },
 ];
-
-const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfuzDK_roSBVUFoXV1GdnyMdXccZDOcojCuDFAh3tjh1PgfNQ/viewform?usp=publish-editor";
 
 interface EventCardProps {
   event: EventInfo;
@@ -239,7 +236,9 @@ const EventCard = ({ event, index, onClick }: EventCardProps) => (
     </div>
     <h3 className="font-display text-lg font-bold text-foreground mb-2">{event.title}</h3>
     <p className="text-muted-foreground text-sm font-body mb-3">{event.desc}</p>
-    <span className="text-primary text-xs font-display font-semibold tracking-wider uppercase">Tap to view details →</span>
+    <span className="inline-block mt-2 px-3 py-1 bg-red-500/20 text-red-400 text-xs font-display font-semibold tracking-wider uppercase rounded-full border border-red-500/40">
+      🔒 Registration Closed
+    </span>
   </motion.div>
 );
 
@@ -315,10 +314,9 @@ const EventDialog = ({ event, onClose }: EventDialogProps) => {
             <h4 className="font-display text-sm font-bold text-foreground mb-2 uppercase tracking-wider">
               Event Coordinators
             </h4>
-
             <div className="space-y-2">
               {event.coordinators.map((coord, i) => (
-                <a
+                
                   key={i}
                   href={`tel:${coord.phone}`}
                   className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
@@ -331,14 +329,10 @@ const EventDialog = ({ event, onClose }: EventDialogProps) => {
           </div>
         )}
 
-        <a
-          href={GOOGLE_FORM_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block w-full py-3 bg-primary text-primary-foreground font-display font-bold text-sm rounded-lg hover:opacity-90 transition-opacity text-center"
-        >
-          Register for {event.title} — ₹150
-        </a>
+        <div className="block w-full py-3 bg-red-500/20 text-red-400 font-display font-bold text-sm rounded-lg text-center border border-red-500/40 cursor-not-allowed select-none">
+          🔒 Registration Closed
+        </div>
+
       </motion.div>
     </motion.div>
   );
