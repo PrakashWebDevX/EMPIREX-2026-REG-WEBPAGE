@@ -1,53 +1,176 @@
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import empirexTitle from "@/assets/empirex-title.png";
 import aiEmpireLogo from "@/assets/ai-empire-logo.png";
 import rvsBanner from "@/assets/rvs-banner.png";
 
+// ✅ Confetti Particle Component
+const ConfettiPiece = ({ index }: { index: number }) => {
+  const colors = ["#FFD700", "#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4", "#FFEAA7", "#DDA0DD", "#98FB98"];
+  const color = colors[index % colors.length];
+  const left = `${Math.random() * 100}%`;
+  const duration = 2.5 + Math.random() * 2;
+  const delay = Math.random() * 1.5;
+  const size = 6 + Math.random() * 8;
+  const isCircle = index % 3 === 0;
 
-const TARGET_DATE = new Date("2026-03-17T09:00:00").getTime();
+  return (
+    <motion.div
+      initial={{ y: -20, x: 0, opacity: 1, rotate: 0, scale: 1 }}
+      animate={{
+        y: "110vh",
+        x: [0, 60 * (index % 2 === 0 ? 1 : -1), -40 * (index % 2 === 0 ? 1 : -1), 30],
+        opacity: [1, 1, 0.8, 0],
+        rotate: [0, 180, 360, 540],
+        scale: [1, 1.2, 0.8, 0.5],
+      }}
+      transition={{ duration, delay, ease: "easeIn", times: [0, 0.3, 0.7, 1] }}
+      className="absolute pointer-events-none z-50"
+      style={{
+        left,
+        top: "-10px",
+        width: size,
+        height: isCircle ? size : size * 0.4,
+        backgroundColor: color,
+        borderRadius: isCircle ? "50%" : "2px",
+      }}
+    />
+  );
+};
 
-const CountdownTimer = () => {
-  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+// ✅ Firework Burst
+const FireworkBurst = ({ x, y, index }: { x: string; y: string; index: number }) => {
+  const colors = ["#FFD700", "#FF6B6B", "#4ECDC4", "#FF9FF3", "#54A0FF"];
+  return (
+    <motion.div
+      className="absolute pointer-events-none z-50"
+      style={{ left: x, top: y }}
+    >
+      {[...Array(12)].map((_, i) => (
+        <motion.div
+          key={i}
+          initial={{ scale: 0, x: 0, y: 0, opacity: 1 }}
+          animate={{
+            scale: [0, 1, 0],
+            x: Math.cos((i / 12) * Math.PI * 2) * (60 + index * 20),
+            y: Math.sin((i / 12) * Math.PI * 2) * (60 + index * 20),
+            opacity: [0, 1, 0],
+          }}
+          transition={{ duration: 1.2, delay: index * 0.3 + 0.1, ease: "easeOut" }}
+          className="absolute w-3 h-3 rounded-full"
+          style={{ backgroundColor: colors[i % colors.length] }}
+        />
+      ))}
+    </motion.div>
+  );
+};
+
+// ✅ Event Started Banner
+const EventStartedBanner = () => (
+  <motion.div
+    initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
+    animate={{ opacity: 1, scale: 1, rotate: 0 }}
+    transition={{ duration: 0.8, type: "spring", bounce: 0.5 }}
+    className="relative"
+  >
+    <div className="relative px-8 py-5 rounded-2xl border-2 border-yellow-400/60 bg-yellow-500/10 backdrop-blur-sm overflow-hidden">
+      {/* Shimmer effect */}
+      <motion.div
+        animate={{ x: ["-100%", "200%"] }}
+        transition={{ duration: 2, repeat: Infinity, repeatDelay: 3, ease: "easeInOut" }}
+        className="absolute inset-0 w-1/3 bg-gradient-to-r from-transparent via-yellow-300/20 to-transparent skew-x-12"
+      />
+      <motion.p
+        animate={{ scale: [1, 1.05, 1] }}
+        transition={{ duration: 1.5, repeat: Infinity }}
+        className="text-yellow-400 font-display font-extrabold text-lg md:text-2xl tracking-widest uppercase"
+      >
+        🎉 The Event Has Begun! 🎉
+      </motion.p>
+      <p className="text-muted-foreground font-body text-xs md:text-sm mt-1 text-center">
+        EMPIREX 2K26 is live at RVS Technical Campus
+      </p>
+    </div>
+  </motion.div>
+);
+
+// ✅ Zeroed-out Countdown
+const CountdownTimer = ({ onComplete }: { onComplete: () => void }) => {
+  const [hasTriggered, setHasTriggered] = useState(false);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      const now = Date.now();
-      const diff = TARGET_DATE - now;
-      if (diff <= 0) { clearInterval(timer); return; }
-      setTimeLeft({
-        days: Math.floor(diff / 86400000),
-        hours: Math.floor((diff % 86400000) / 3600000),
-        minutes: Math.floor((diff % 3600000) / 60000),
-        seconds: Math.floor((diff % 60000) / 1000),
-      });
-    }, 1000);
-    return () => clearInterval(timer);
+    if (!hasTriggered) {
+      setHasTriggered(true);
+      onComplete();
+    }
   }, []);
+
+  const labels = ["days", "hours", "minutes", "seconds"];
 
   return (
     <div className="flex gap-3 md:gap-6 justify-center">
-      {Object.entries(timeLeft).map(([label, value]) => (
-        <div key={label} className="glass-card px-3 py-2 md:px-5 md:py-3 text-center min-w-[60px] md:min-w-[80px]">
+      {labels.map((label) => (
+        <motion.div
+          key={label}
+          initial={{ scale: 1 }}
+          animate={{ scale: [1, 1.15, 1] }}
+          transition={{ duration: 0.6, delay: labels.indexOf(label) * 0.1 }}
+          className="glass-card px-3 py-2 md:px-5 md:py-3 text-center min-w-[60px] md:min-w-[80px] border border-yellow-400/30"
+        >
           <div className="text-2xl md:text-4xl font-bold gold-gradient-text font-display">
-            {String(value).padStart(2, "0")}
+            00
           </div>
           <div className="text-xs md:text-sm text-muted-foreground uppercase tracking-widest font-body">
             {label}
           </div>
-        </div>
+        </motion.div>
       ))}
     </div>
   );
 };
 
 const HeroSection = () => {
+  const [showCelebration, setShowCelebration] = useState(false);
+  const [confettiPieces, setConfettiPieces] = useState<number[]>([]);
+
+  const triggerCelebration = () => {
+    setShowCelebration(true);
+    setConfettiPieces(Array.from({ length: 80 }, (_, i) => i));
+
+    // Re-trigger confetti waves
+    setTimeout(() => setConfettiPieces(Array.from({ length: 80 }, (_, i) => i + 80)), 2000);
+    setTimeout(() => setConfettiPieces(Array.from({ length: 60 }, (_, i) => i + 160)), 4000);
+  };
+
   const scrollToRegister = () => {
     document.getElementById("register")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center hero-gradient overflow-hidden">
+
+      {/* 🎊 Confetti */}
+      <AnimatePresence>
+        {confettiPieces.map((i) => (
+          <ConfettiPiece key={i} index={i} />
+        ))}
+      </AnimatePresence>
+
+      {/* 🎆 Fireworks */}
+      <AnimatePresence>
+        {showCelebration && (
+          <>
+            <FireworkBurst x="15%" y="20%" index={0} />
+            <FireworkBurst x="80%" y="15%" index={1} />
+            <FireworkBurst x="50%" y="10%" index={2} />
+            <FireworkBurst x="25%" y="35%" index={3} />
+            <FireworkBurst x="70%" y="30%" index={4} />
+            <FireworkBurst x="10%" y="50%" index={5} />
+            <FireworkBurst x="90%" y="45%" index={6} />
+          </>
+        )}
+      </AnimatePresence>
+
       {/* Decorative particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(20)].map((_, i) => (
@@ -89,32 +212,42 @@ const HeroSection = () => {
           <p className="text-xs md:text-sm text-muted-foreground font-body font-bold mb-1">
             Department of B.Tech AI &amp; Data Science
           </p>
-
           <p className="text-xs md:text-sm text-muted-foreground font-body font-bold mb-8">
             RVS Technical Campus, Coimbatore
           </p>
 
-          <CountdownTimer />
+          {/* ⏱ Countdown Timer — always shows 00 */}
+          <CountdownTimer onComplete={triggerCelebration} />
 
+          {/* 🎉 Event Started Banner */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.6 }}
+            className="mt-8"
+          >
+            <EventStartedBanner />
+          </motion.div>
+
+          {/* 🔒 Register Button — Closed */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.5 }}
-            className="mt-8 flex gap-4"
+            className="mt-6 flex gap-4"
           >
-            <button
-              onClick={scrollToRegister}
-              className="px-8 py-3 bg-primary text-primary-foreground font-display font-bold text-sm md:text-base rounded-lg animate-glow-pulse hover:scale-105 transition-transform">
-              Register Now — ₹150
-            </button>
+            <div className="px-8 py-3 bg-red-500/10 text-red-400/70 font-display font-bold text-sm md:text-base rounded-lg border border-red-500/20 cursor-not-allowed select-none">
+              🔒 Registration Closed
+            </div>
           </motion.div>
 
-<p className="mt-6 text-xl md:text-2xl text-muted-foreground font-body">
-  📅 March 17, 2026 &nbsp;|&nbsp; 📍 Room No 222 – Seminar Hall
-</p>
+          <p className="mt-6 text-xl md:text-2xl text-muted-foreground font-body">
+            📅 March 17, 2026 &nbsp;|&nbsp; 📍 Room No 222 – Seminar Hall
+          </p>
         </motion.div>
       </div>
     </section>
   );
 };
+
 export default HeroSection;
