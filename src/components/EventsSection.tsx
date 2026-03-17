@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Film, Brain, Lightbulb, Gamepad2, Palette, Users, X, Clock, MapPin, Trophy, Phone, FileText, Network, ShieldAlert } from "lucide-react";
+import {
+  Film, Brain, Lightbulb, Gamepad2, Palette,
+  Users, X, Clock, MapPin, Trophy, Phone,
+  FileText, Network, ShieldAlert
+} from "lucide-react";
 
 interface EventInfo {
   icon: React.ElementType;
@@ -19,7 +23,7 @@ const technicalEvents: EventInfo[] = [
     icon: FileText,
     title: "INNOPAPER",
     desc: "A platform for students to present innovative research ideas, technical solutions, or futuristic concepts in AI, Data Science, and emerging technologies.",
-    fullDesc: "A platform for students to present innovative research ideas, technical solutions, or futuristic concepts in AI, Data Science, and emerging technologies. Showcase your creativity and technical knowledge by presenting a research paper or project proposal. Impress the judges with your vision for the future of tech!",
+    fullDesc: "A platform for students to present innovative research ideas, technical solutions, or futuristic concepts in AI, Data Science, and emerging technologies. Showcase your creativity and technical knowledge by presenting a research paper or project proposal.",
     rules: [
       "Team size: 1-3 members",
       "Topics must be relevant to approved domains",
@@ -27,12 +31,8 @@ const technicalEvents: EventInfo[] = [
       "Presentation time: 8 minutes + 2 minutes Q&A",
       "PPT should not exceed 8 slides",
       "File format: PPT or PDF",
-      "Participants must bring their presentation in a pen drive or share via WhatsApp on the day of the event",
-      "Judging Criteria:",
-      "       -Innovation",
-      "       -Technical Content",
-      "       -Presentation Skills",
-      "       -Response to Questions"
+      "Participants must bring their presentation in a pen drive or share via WhatsApp",
+      "Judging Criteria: Innovation, Technical Content, Presentation Skills, Response to Questions"
     ],
     duration: "1.5 Hours",
     venue: "Room 222",
@@ -66,23 +66,19 @@ const technicalEvents: EventInfo[] = [
   {
     icon: ShieldAlert,
     title: "HACK THE CODE",
-    desc: "Participants will be provided with code snippets containing logical, syntax, or runtime errors. Within the given time, they must analyze the code, identify the mistakes, and correct them to produce the expected output.",
-    fullDesc: "In this event, participants will be provided with code snippets containing logical, syntax, or runtime errors. Within the given time, they must analyze the code, identify the mistakes, and correct them to produce the expected output. This event tests your debugging skills, understanding of programming concepts, and ability to think critically under pressure.",
+    desc: "Participants will be provided with code snippets containing errors. They must analyze, identify the mistakes, and correct them to produce the expected output.",
+    fullDesc: "Participants will be provided with code snippets containing logical, syntax, or runtime errors. Within the given time, they must analyze the code, identify the mistakes, and correct them to produce the expected output.",
     rules: [
       "Platform: Local web-based coding platform hosted on college lab server",
-      "Internet Requirement: Not required. Event will run fully on local LAN",
+      "Internet Requirement: Not required - runs fully on local LAN",
       "Programming Languages Allowed: Python (primary language)",
-      "Number of Problems: 3 rounds (one problem per round, increasing difficulty)",
-      "Total Time Duration: 90 minutes (1.5 hours)",
-      "Round-wise Time Split:",
-      "- Round 1: 25 minutes (Debugging)",
-      "- Round 2: 30 minutes (DSA)",
-      "- Round 3: 35 minutes (DSA)",
-      "Individual or Team?: Team event (3 members per team)",
-      "Evaluation Criteria:",
-      "- Correctness of output (primary)",
-      "- Submission time",
-      "- Code efficiency (for final round if needed)"
+      "Number of Problems: 3 rounds, one problem per round",
+      "Total Time Duration: 90 minutes",
+      "Round 1: 25 minutes (Debugging)",
+      "Round 2: 30 minutes (DSA)",
+      "Round 3: 35 minutes (DSA)",
+      "Team event: 3 members per team",
+      "Evaluation: Correctness of output, Submission time, Code efficiency"
     ],
     duration: "1.5 Hours",
     venue: "Room 222",
@@ -95,8 +91,8 @@ const technicalEvents: EventInfo[] = [
   {
     icon: Network,
     title: "ALGO CONNECT",
-    desc: "Algo Connect is a logic-based technical event where participants must identify the name of an algorithm by connecting visual clues.",
-    fullDesc: "Algo Connect is a logic-based technical event where participants must identify the name of an algorithm by connecting visual clues. Participants will be shown a series of images, diagrams, or code snippets that represent key characteristics or steps of a well-known algorithm. By analyzing these clues, they must deduce the correct algorithm name.",
+    desc: "A logic-based technical event where participants must identify the name of an algorithm by connecting visual clues.",
+    fullDesc: "Algo Connect is a logic-based technical event where participants must identify the name of an algorithm by connecting visual clues. Participants will be shown a series of images, diagrams, or code snippets that represent key characteristics or steps of a well-known algorithm.",
     rules: [
       "Team Size: 2",
       "Number of Rounds: 3",
@@ -113,18 +109,14 @@ const technicalEvents: EventInfo[] = [
   {
     icon: Lightbulb,
     title: "IDEATHON",
-    desc: "Ideathon is a dynamic idea-generation event where participants develop innovative solutions to real-world challenges within a limited time frame.",
-    fullDesc: "Ideathon is a dynamic idea-generation event where participants develop innovative solutions to real-world challenges within a limited time frame. Participants will be presented with a specific problem statement related to technology, society, or the environment. They must brainstorm, collaborate, and create a compelling solution that addresses the problem effectively.",
+    desc: "A dynamic idea-generation event where participants develop innovative solutions to real-world challenges within a limited time frame.",
+    fullDesc: "Ideathon is a dynamic idea-generation event where participants develop innovative solutions to real-world challenges within a limited time frame. Participants will be presented with a specific problem statement related to technology, society, or the environment.",
     rules: [
       "Open topic that creates a positive impact on society",
       "Team size: 2-3 members",
-      "Time limit: Round 1 - 3 to 4 minutes per team / Round 2 - 5 minutes per team",
+      "Time limit: Round 1 - 3 to 4 minutes per team, Round 2 - 5 minutes per team",
       "PPT presentation is mandatory",
-      "Ideas only are required",
-      "Judging Criteria:",
-      "- Feasibility",
-      "- Innovation",
-      "- Impact"
+      "Judging Criteria: Feasibility, Innovation, Impact"
     ],
     duration: "1.5 Hours",
     venue: "Room 222",
@@ -133,22 +125,21 @@ const technicalEvents: EventInfo[] = [
       { name: "AJAY KUMAR", phone: "8525956361" },
       { name: "LEENA", phone: "8072867957" }
     ]
-  },
+  }
 ];
 
 const nonTechnicalEvents: EventInfo[] = [
   {
     icon: Film,
     title: "SCENE CHAIN",
-    desc: "The Scene Chain Game (Movie Edition) is a fun and interactive activity where players connect scenes using movie titles, characters, or famous moments.",
-    fullDesc: "The Scene Chain Game (Movie Edition) is a fun and interactive activity where players connect scenes using movie titles, characters, or famous moments. Each participant must link one movie scene to another in a logical or creative way, forming a continuous chain of movies. This game is perfect for movie lovers and helps improve memory, creativity, and quick thinking.",
+    desc: "A fun and interactive activity where players connect scenes using movie titles, characters, or famous moments.",
+    fullDesc: "The Scene Chain Game (Movie Edition) is a fun and interactive activity where players connect scenes using movie titles, characters, or famous moments. Each participant must link one movie scene to another in a logical or creative way, forming a continuous chain of movies.",
     rules: [
       "Team size: 1-3 members only",
-      "Judging Criteria:",
-      "- Creativity - 10 marks",
-      "- Humor - 10 marks",
-      "- Relevance to Topic - 10 marks",
-      "Use of mobile phones or other devices for searching is strictly prohibited (leads to elimination)",
+      "Creativity - 10 marks",
+      "Humor - 10 marks",
+      "Relevance to Topic - 10 marks",
+      "Use of mobile phones for searching is strictly prohibited",
       "Decision of judges will be final"
     ],
     duration: "1.5 Hours",
@@ -162,12 +153,12 @@ const nonTechnicalEvents: EventInfo[] = [
   {
     icon: Gamepad2,
     title: "GAMEVORA",
-    desc: "E-Games (PUBG & Free Fire) is an exciting competitive gaming event featuring popular battle royale games. Participants compete in intense survival matches that test strategy, teamwork, and quick decision-making skills.",
+    desc: "E-Games (PUBG & Free Fire) is an exciting competitive gaming event featuring popular battle royale games.",
     fullDesc: "E-Games (PUBG & Free Fire) is an exciting competitive gaming event featuring popular battle royale games. Participants compete in intense survival matches that test strategy, teamwork, and quick decision-making skills.",
     rules: [
       "Available Games:",
-      "Free Fire (Clash Squad / Battle Royal - No rules | Map: Bermuda)",
-      "PUBG (TDM - No rules)"
+      "Free Fire - Clash Squad / Battle Royal, Map: Bermuda",
+      "PUBG - TDM mode"
     ],
     duration: "1.5 Hours",
     venue: "Room 222",
@@ -180,22 +171,15 @@ const nonTechnicalEvents: EventInfo[] = [
   {
     icon: Palette,
     title: "MEME MASTER",
-    desc: "Unleash your creativity and humor in this fun-filled meme creation contest! Participants must create original memes based on a topic given on the spot.",
+    desc: "Unleash your creativity and humor in this fun-filled meme creation contest based on a topic given on the spot.",
     fullDesc: "Unleash your creativity and humor in this fun-filled meme creation contest! Participants must create original memes based on a topic given on the spot. Show your wit, timing, and relatability to win the title of Meme Master!",
     rules: [
       "Topic will be given on the spot",
-      "Example Topics:",
-      "College Life",
-      "Exam Fever",
-      "Department Moments",
-      "Trending Technology",
-      "Tools Allowed: Mobile phones, Laptop, Canva / Editing Apps, Basic meme templates",
-      "Limited internet usage allowed only for tools (not for copying memes)",
+      "Example Topics: College Life, Exam Fever, Department Moments, Trending Technology",
+      "Tools Allowed: Mobile phones, Laptop, Canva or Editing Apps",
+      "Limited internet usage allowed only for tools",
       "Team size: Individual or 2 members only",
-      "Judging Criteria:",
-      "- Creativity - 10 marks",
-      "- Humor - 10 marks",
-      "- Relevance to Topic - 10 marks",
+      "Creativity - 10 marks, Humor - 10 marks, Relevance to Topic - 10 marks",
       "Only original content must be created",
       "Decision of judges will be final"
     ],
@@ -214,19 +198,13 @@ const nonTechnicalEvents: EventInfo[] = [
     fullDesc: "A fun team puzzle game inspired by NYT Connections! Using logic, communication, and teamwork. Strategize with your partner to crack the code!",
     rules: [
       "Team Composition: 2-5 members per team",
-      "Total Round: 2",
-      "1. First Round: Open Content",
-      "2. Second round: Fixed Content (On The Spot)",
-      "Time Constraints: 2-3 minutes to prepare and 3-4 minutes to perform",
-      "Product/Topic Assignment: Products may be random or unusual and will be assigned on the spot",
-      "Performance Elements: Teams may use catchy taglines, jingles, skits, and props",
-      "Content Restrictions: No obscene or offensive language is allowed",
-      "Judging Criteria:",
-      "- Originality",
-      "- Creativity",
-      "- Humor",
-      "- Marketing effectiveness",
-      "Finality: Judges decision is final and binding"
+      "Total Rounds: 2",
+      "First Round: Open Content",
+      "Second Round: Fixed Content - On The Spot",
+      "Time: 2-3 minutes to prepare, 3-4 minutes to perform",
+      "No obscene or offensive language allowed",
+      "Judging: Originality, Creativity, Humor, Marketing effectiveness",
+      "Judges decision is final and binding"
     ],
     duration: "1.5 Hours",
     venue: "Room 222",
@@ -240,9 +218,8 @@ const nonTechnicalEvents: EventInfo[] = [
     icon: Trophy,
     title: "IPL AUCTION",
     desc: "Compete in an IPL Quiz and build your dream team in a high-energy mock auction challenge.",
-    fullDesc: "The event begins with a 15-minute IPL quiz to select the top teams. Each team can have a maximum of 3 members. The qualified teams then participate in a mock IPL auction with a virtual budget of Rs.120 crore to build a squad of 13 players. The winner is determined using an AI-based scoring system that evaluates overall team strength based on player performance.",
+    fullDesc: "The event begins with a 15-minute IPL quiz to select the top teams. Each team can have a maximum of 3 members. The qualified teams then participate in a mock IPL auction with a virtual budget of Rs.120 crore to build a squad of 13 players.",
     rules: [
-      "Activity | Duration",
       "IPL Quiz - 15 Minutes",
       "Auction - 75 Minutes",
       "Total - 90 Minutes"
@@ -254,7 +231,7 @@ const nonTechnicalEvents: EventInfo[] = [
       { name: "HARIPRASATH", phone: "7305155011" },
       { name: "YUVARAJA", phone: "9842152667" }
     ]
-  },
+  }
 ];
 
 interface EventCardProps {
@@ -357,20 +334,19 @@ const EventDialog = ({ event, onClose }: EventDialogProps) => {
             </h4>
             <div className="space-y-2">
               {event.coordinators.map((coord, i) => (
-                
+                <div
                   key={i}
-                  href={`tel:${coord.phone}`}
-                  className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                  className="flex items-center gap-2 text-sm text-muted-foreground"
                 >
                   <Phone className="w-4 h-4 text-primary" />
-                  {coord.name} : {coord.phone}
-                </a>
+                  <span>{coord.name} : {coord.phone}</span>
+                </div>
               ))}
             </div>
           </div>
         )}
 
-        <div className="block w-full py-3 bg-red-500/20 text-red-400 font-display font-bold text-sm rounded-lg text-center border border-red-500/40 cursor-not-allowed select-none">
+        <div className="w-full py-3 bg-red-500/20 text-red-400 font-display font-bold text-sm rounded-lg text-center border border-red-500/40 cursor-not-allowed select-none">
           Registration Closed
         </div>
 
@@ -399,7 +375,12 @@ const EventsSection = () => {
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {technicalEvents.map((e, i) => (
-              <EventCard key={e.title} event={e} index={i} onClick={() => setSelectedEvent(e)} />
+              <EventCard
+                key={e.title}
+                event={e}
+                index={i}
+                onClick={() => setSelectedEvent(e)}
+              />
             ))}
           </div>
         </div>
@@ -420,14 +401,22 @@ const EventsSection = () => {
           </motion.div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {nonTechnicalEvents.map((e, i) => (
-              <EventCard key={e.title} event={e} index={i} onClick={() => setSelectedEvent(e)} />
+              <EventCard
+                key={e.title}
+                event={e}
+                index={i}
+                onClick={() => setSelectedEvent(e)}
+              />
             ))}
           </div>
         </div>
       </section>
 
       {selectedEvent && (
-        <EventDialog event={selectedEvent} onClose={() => setSelectedEvent(null)} />
+        <EventDialog
+          event={selectedEvent}
+          onClose={() => setSelectedEvent(null)}
+        />
       )}
     </>
   );
